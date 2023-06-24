@@ -1,6 +1,4 @@
-import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import App from './App'
 import { RouterLayout } from './components/RouterLayout'
 import Home from './pages/Home'
 import User from './pages/User'

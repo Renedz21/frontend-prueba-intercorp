@@ -39,9 +39,9 @@ const Home = () => {
             }
             // const result = await axios.post('http://localhost:3000', formData);
             const result = await createClient(formData);
-            const data = result.data;
-            if (data) {
+            if (result) {
                 setIsLoading(false)
+                toast.success(result.message)
                 getAllClients();
                 getStandart();
                 setFormData({
@@ -53,7 +53,6 @@ const Home = () => {
                 setTimeout(() => {
                     setIsOpen(false)
                 }, 1500)
-                toast.success(data.message)
             }
         } catch (error) {
             setIsLoading(false)
